@@ -1,4 +1,4 @@
-fn order_tuple(i: usize, j: usize) -> (usize, usize) {
+pub fn order_tuple(i: usize, j: usize) -> (usize, usize) {
     if i <= j {
         (i, j)
     } else {
@@ -6,7 +6,7 @@ fn order_tuple(i: usize, j: usize) -> (usize, usize) {
     }
 }
 
-fn order_triple(i: usize, j: usize, k: usize) -> (usize, usize, usize) {
+pub fn order_triple(i: usize, j: usize, k: usize) -> (usize, usize, usize) {
     let (a, b, c) = (i, j, k);
 
     let (a, b) = order_tuple(a, b);
