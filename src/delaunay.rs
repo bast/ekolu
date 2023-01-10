@@ -1,5 +1,5 @@
-fn delaunay_triangulate(positions: &[(f64, f64)]) -> Vec<(usize, usize, usize)> {
-    let points: Vec<delaunator::Point> = positions
+pub fn delaunay_triangulate(coordinates: &[(f64, f64)]) -> Vec<(usize, usize, usize)> {
+    let points: Vec<delaunator::Point> = coordinates
         .iter()
         .map(|&(x, y)| delaunator::Point { x, y })
         .collect();
